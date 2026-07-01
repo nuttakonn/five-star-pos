@@ -21,7 +21,7 @@ yarn-error.log*
 # Secrets & Keys
 *.json
 !package.json
-!tsconfig.json
+!tsconfig*.json
 !rich-menu.json
 !vercel.json
 !render.yaml
