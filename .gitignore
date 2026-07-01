@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment Variables
+.env
+.env.*
+!.env.example
+
+# Production
+dist/
+build/
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets & Keys
+*.json
+!package.json
+!tsconfig.json
+!rich-menu.json
+!vercel.json
+!render.yaml
+!version.json
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Temporary scripts
+apps/api/scripts/check-users.ts
+apps/api/scripts/update-admin-password.ts
+scripts/restore-credentials.ts
+scripts/fix-env.ts
+

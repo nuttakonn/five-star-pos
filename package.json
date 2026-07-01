@@ -1,0 +1,29 @@
+{
+  "name": "five-star-pos",
+  "version": "1.0.0",
+  "description": "A production-ready, mobile-first Point of Sale (POS) system integrated with **LINE Messaging API** and **Google Sheets** as a database. This system allows you to manage products, track stock, record sales via LINE, and monitor business performance through a modern web dashboard.",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "npm install && cd apps/api && npm install && cd ../web && npm install",
+    "dev:api": "cd apps/api && npm run dev",
+    "dev:web": "cd apps/web && npm run dev",
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "init:db": "cd apps/api && npx ts-node scripts/init-sheets.ts",
+    "setup:rich-menu": "cd apps/api && npx ts-node scripts/setup-rich-menu.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nuttakonn/five-star-pos.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nuttakonn/five-star-pos/issues"
+  },
+  "homepage": "https://github.com/nuttakonn/five-star-pos#readme",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

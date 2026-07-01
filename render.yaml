@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: five-star-api
+    env: docker
+    dockerContext: .
+    dockerfilePath: apps/api/Dockerfile
+    plan: free
+    region: singapore
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - fromGroup: five-star-secrets
